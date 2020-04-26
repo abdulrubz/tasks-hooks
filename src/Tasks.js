@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Tasks.css";
 import Task from "./Task";
+import TaskForm from "./TaskForm";
 
 const Tasks = () => {
   const data = JSON.parse(localStorage.getItem("tasks"));
@@ -26,24 +27,7 @@ const Tasks = () => {
     <div>
       <h1 className="title is-4">Get Sh!t Done</h1>
 
-      <div className="taskForm">
-        <form onSubmit={addTask}>
-          <div className="field has-addons">
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                value={title}
-                placeholder="Add a task"
-                onChange={(e) => setTitle(e.target.value)}
-              />
-            </div>
-            <div className="control">
-              <button className="button is-info">Add Task</button>
-            </div>
-          </div>
-        </form>
-      </div>
+      <TaskForm addTask={addTask} setTitle={setTitle} title={title} />
 
       <Task tasks={tasks} removeTask={removeTask} />
     </div>
