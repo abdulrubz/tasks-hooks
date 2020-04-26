@@ -1,0 +1,26 @@
+.taskForm {
+  margin-right: auto;
+  margin-left: auto;
+  width: 355px;
+  margin-bottom: 2rem;
+}
+
+table {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.taskTitle {
+  min-width: 300px !important;
+}
+
+.deleteButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.input,
+.button {
+  border-radius: 0%;
+}
