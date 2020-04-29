@@ -1,21 +1,21 @@
 import React from "react";
 import "./Tasks.css";
+import Button from "./Button";
 
-const Task = (props) => {
+const Task = ({ removeTask, tasks }) => {
   return (
     <div className="taskDisplay">
       <table className="table is-striped is-bordered">
         <tbody>
-          {props.tasks.map((task) => (
+          {tasks.map((task) => (
             <tr className="taskCell" key={task.title}>
               <td className="taskTitle">{task.title}</td>
               <td>
-                <button
-                  className="deleteButton"
-                  onClick={() => props.removeTask(task.title)}
-                >
-                  ❌
-                </button>
+                <Button
+                  classes="deleteButton"
+                  text="❌"
+                  clickFunction={() => removeTask(task.title)}
+                />
               </td>
             </tr>
           ))}

@@ -10,7 +10,7 @@ const Tasks = () => {
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
-  });
+  }, [tasks]);
 
   const addTask = (e) => {
     e.preventDefault();
