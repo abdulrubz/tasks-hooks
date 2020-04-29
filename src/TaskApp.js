@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./Tasks.css";
-import Task from "./Task";
+import TaskTable from "./TaskTable";
 import TaskForm from "./TaskForm";
 
-const Tasks = () => {
+const TaskApp = () => {
   const data = JSON.parse(localStorage.getItem("tasks"));
   const [tasks, setTasks] = useState(data || []);
   const [title, setTitle] = useState("");
@@ -29,9 +29,9 @@ const Tasks = () => {
 
       <TaskForm addTask={addTask} setTitle={setTitle} title={title} />
 
-      <Task tasks={tasks} removeTask={removeTask} />
+      <TaskTable tasks={tasks} removeTask={removeTask} />
     </div>
   );
 };
 
-export default Tasks;
+export default TaskApp;

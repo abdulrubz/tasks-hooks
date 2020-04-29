@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Tasks from "./Tasks";
+import TaskApp from "./TaskApp";
 
 function App() {
   return (
     <div className="App">
-      <Tasks />
+      <TaskApp />
     </div>
   );
 }
