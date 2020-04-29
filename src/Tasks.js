@@ -25,7 +25,7 @@ const Tasks = () => {
 
   return (
     <div>
-      <h1 className="title is-4">Get Sh!t Done</h1>
+      <h1 className="title is-4">Yet Another Todo App</h1>
 
       <TaskForm addTask={addTask} setTitle={setTitle} title={title} />
 
